@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Surface
+{ 
+    static int countBuildings(int arr[], int n,int p) 
+    { 
+         
+        int count = 1; 
+        int curr_max = arr[0]; 
+        for (int i=1; i<n; i++) 
+        { 
+             
+            if (arr[i] > curr_max) 
+            { 
+                count++; 
+                curr_max=arr[i]; 
+            } 
+        } 
+       
+        return count; 
+    }
+  
+    
+    public static void main(String[] args)  
+    { 
+        
+        Point polygon1[] = {new Point(4,0), 
+                            new Point(4,-5),  
+                            new Point(7,-5),  
+                            new Point(7,0)}; 
+        int n = polygon1.length; 
+        Point p = new Point(1,1); 
+        System.out.println("point will be change according to the user ");
+        System.out.println(countBuildings(polygon1[],n,p));
+       
+    } 
+} 
